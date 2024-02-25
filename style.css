@@ -40,7 +40,6 @@ ul {
 .container {
     max-width: 1180px;
     margin-inline: auto;
-    overflow: hidden;
 }
 
 nav {
@@ -137,7 +136,7 @@ main {
 .card:hover {
     box-shadow: 1px 1px 8px #d4ecff;
     background-color: #f9fdff;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .card-header img {
