@@ -1,89 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsPulse -Unvieling Truth Uniting Voices</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-
+    <input type="checkbox" id="check">
     <nav>
         <div class="main-nav container flex">
-            <a href="" class="logo">
-                <img src="/News Pulse.png" alt="Logo">
-            </a>
+            <div class="logo"><a href="#" onclick="reload()" class="company-logo">
+                <img src="/News Pulse.png" alt="company logo">
+            </a></div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="Topic of Interest">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
             <div class="nav-links">
                 <ul class="flex">
-                    <li class="hover-link nav-item">Sports</li>
-                    <li class="hover-link nav-item">Finance</li>
-                    <li class="hover-link nav-item">Politics</li>
-                    <li class="hover-link nav-item">Technology</li>
+                    <li class="hover-link nav-item" id = "headlines" onclick="reload('headlines')"><a href="#top">Headlines</a></li>
+                    <li class="hover-link nav-item" id = "sports" onclick="onNavItemClick('sports')"><a href="#top">Sports</a></li>
+                    <li class="hover-link nav-item" id = "business" onclick="onNavItemClick('business')"><a href="#top">Business</a></li>
+                    <li class="hover-link nav-item" id = "politics" onclick="onNavItemClick('politics')"><a href="#top">Politics</</li>
+                    <li class="hover-link nav-item" id = "technology" onclick="onNavItemClick('technology')"><a href="#top">Technology</a></li>
+                    <li class="hover-link nav-item" id = "science" onclick="onNavItemClick('science')"><a href="#top">Science</a></li>
                 </ul>
             </div>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="Topic of Interest">
-                <button class="search-button">Search</button>
-            </div>
+            <label for="check" class="bar">
+                <span class="fa fa-bars" style="color: #2294ed;" id="bars"></span>
+                <span class="fa fa-times" id="times" style="color: #2294ed;"></span>
+            </label>
         </div>
     </nav>
-
+    
 
     <main>
-        <div class="cards-container container flex">
-            <a href="https://timesofindia.indiatimes.com/sports/cricket/england-in-india/ind-vs-eng-4th-test-india-sniff-series-victory-after-r-ashwin-kuldeep-yadav-rout-england/articleshow/107986136.cms">
-            <div class="card">
-                <div class="card-header">
-                    <img src="https://static.toiimg.com/thumb/msid-107986415,imgsize-76556,width-400,resizemode-4/107986415.jpg" alt="News Image" id="news-img">
-                </div>
-                <div class="card-content">
-                    <h3 id="news-title">IND vs ENG 4th Test: India sniff series victory after R Ashwin, KUldeep Yadav rout England</h3>
-                    <h6 class="news-source" id="news-source">Times of India / Feb 25, 2024, 17:13 IST</h6>
-                    <p class="news-desc" id="news-desc">Spinner Ravichandran Ashwin starred with five wickets, helping India dismiss England for 145 on day three of the fourth Test on Sunday. This set ...</p>
-                </div>
-            </div>
-            </a>
-            <a href="https://indianexpress.com/article/technology/tech-news-technology/tech-news-of-the-week-4-february-gemini-ai-mwc-2024-9180091/">
-            <div class="card">
-                <div class="card-header">
-                    <img src="https://images.indianexpress.com/2024/02/Gemini-google-LLM-20240208.jpg?w=640" alt="News Image" id="news-img">
-                </div>
-                <div class="card-content">
-                    <h3 id="news-title">Tech News of the week: Gemini AI image generation controversy, MWC 2024, and more</h3>
-                    <h6 class="news-source" id="news-source">Indian Express / Feb 25, 2024, 16:13 IST</h6>
-                    <p class="news-desc" id="news-desc">Tech News of the week (Fourth week of February 2024): Google admitted that Gemini AI got the image generation wrong, and the 2024 edition of the Mobile World ...</p>
-                </div>
-            </div>
-            </a>
-            <a href="https://www.business-standard.com/world-news/rishi-sunak-warns-of-toxic-culture-in-uk-politics-amid-threats-to-mps-124022500328_1.html">
-            <div class="card">
-                <div class="card-header">
-                    <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-02/15/full/1707985999-5696.jpg?im=FeatureCrop,size=(826,465)" alt="News Image" id="news-img">
-                </div>
-                <div class="card-content">
-                    <h3 id="news-title">Rishi Sunak warns of 'toxic' culture in UK politics amid threats to MPs</h3>
-                    <h6 class="news-source" id="news-source">Business Standard / Feb 25, 2024, 17:30 IST</h6>
-                    <p class="news-desc" id="news-desc">The explosion in prejudice and antisemitism since the Hamas attacks on the 7 October [2023] are as unacceptable as they are un-British. Simply put antisemitism ...</p>
-                </div>
-            </div>
-            </a>
-            <a href="https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-irctc-indiabulls-housing-finance-among-4-stock-recommendations-for-monday/slideshow/107983251.cms?from=mdr">
-            <div class="card">
-                <div class="card-header">
-                    <img src="https://plus.unsplash.com/premium_photo-1681469490209-c2f9f8f5c0a2?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="News Image" id="news-img">
-                </div>
-                <div class="card-content">
-                    <h3 id="news-title">Market Trading Guide: IRCTC, Indiabulls Housing Finance among 4 stock recommendations for Monday</h3>
-                    <h6 class="news-source" id="news-source">The Economic Times / Feb 25, 2024, 13:45 IST</h6>
-                    <p class="news-desc" id="news-desc">Indian shares logged their second straight week of gains, with the benchmark Nifty 50 index hitting record highs in all five sessions, buoyed by a rise in ...</p>
-                </div>
-            </div>
-            </a>
+        <div class="cards-container container flex" id="cards-container">
+            
         </div>
     </main>
-</body>
 
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <footer>
+        <div class="copyright">Copyright © 2024 NewsPulse. All rights reserved.</div>
+        <div class="about">
+            <ul>
+                <li><a href="/terms.html" target="_blank">Terms</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <li><a href="/privacy.html" target="_blank">Privacy</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <li>FAQs</li>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/16e1904bc9.js" crossorigin="anonymous"></script>
+</body>
 </html>
