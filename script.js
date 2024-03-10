@@ -51,7 +51,7 @@ function fillDataInCard(cardClone, article) {
     newsDesc.innerHTML = article.description;
 
     const date = new Date(article.publishedAt).toLocaleString("en-US", {
-        timeZone: "Asia/Jakarta",
+        timeZone: "Asia/Kolkata",
     });
 
     newsSource.innerHTML = `${article.source.name} · ${date}`;
