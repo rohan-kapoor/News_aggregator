@@ -4,7 +4,7 @@ const url2 = "https://newsapi.org/v2/everything?q="
 
 window.addEventListener("load", () => fetchNews("#RELOAD"));
 
-function reload(id) {
+function reload() {
     window.location.reload();
 }
 
