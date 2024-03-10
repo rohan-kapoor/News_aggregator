@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +9,32 @@
     <link rel="shortcut icon" href="/Favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <input type="checkbox" id="check">
     <nav>
-        <div class="main-nav container flex">
-            <div class="logo"><a href="#" onclick="reload()" class="company-logo">
-                <img src="/News Pulse.png" alt="company logo">
-            </a></div>
+        <div class="navbar container flex">
+            <div class="logo"><a href="#" onclick="reload()" class="website-logo">
+                    <img src="/News Pulse.png" alt="website logo">
+                </a></div>
             <div class="search-bar flex">
                 <input id="search-text" type="text" class="news-input" placeholder="Topic of Interest">
                 <button id="search-button" class="search-button">Search</button>
             </div>
-            <div class="nav-links">
+            <div class="navbar-topics">
                 <ul class="flex">
-                    <li class="hover-link nav-item" id = "headlines" onclick="reload('headlines')"><a href="#top">Headlines</a></li>
-                    <li class="hover-link nav-item" id = "sports" onclick="onNavItemClick('sports')"><a href="#top">Sports</a></li>
-                    <li class="hover-link nav-item" id = "business" onclick="onNavItemClick('business')"><a href="#top">Business</a></li>
-                    <li class="hover-link nav-item" id = "politics" onclick="onNavItemClick('politics')"><a href="#top">Politics</a></li>
-                    <li class="hover-link nav-item" id = "technology" onclick="onNavItemClick('technology')"><a href="#top">Technology</a></li>
-                    <li class="hover-link nav-item" id = "science" onclick="onNavItemClick('science')"><a href="#top">Science</a></li>
+                    <li class="nav-link" id="headlines" onclick="reload('headlines')"><a
+                            href="#top">Headlines</a></li>
+                    <li class="nav-link" id="sports" onclick="onNavItemClick('sports')"><a
+                            href="#top">Sports</a></li>
+                    <li class="nav-link" id="business" onclick="onNavItemClick('business')"><a
+                            href="#top">Business</a></li>
+                    <li class="nav-link" id="politics" onclick="onNavItemClick('politics')"><a
+                            href="#top">Politics</a></li>
+                    <li class="nav-link" id="technology" onclick="onNavItemClick('technology')"><a
+                            href="#top">Technology</a></li>
+                    <li class="nav-link" id="science" onclick="onNavItemClick('science')"><a
+                            href="#top">Science</a></li>
                 </ul>
             </div>
             <label for="check" class="bar">
@@ -35,11 +43,11 @@
             </label>
         </div>
     </nav>
-    
+
 
     <main>
         <div class="cards-container container flex" id="cards-container">
-            
+
         </div>
     </main>
 
@@ -49,9 +57,9 @@
                 <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
             </div>
             <div class="card-content">
-                <h3 id="news-title">This is the Title</h3>
-                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
-                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+                <h3 id="news-title"></h3>
+                <h6 class="news-source" id="news-source"></h6>
+                <p class="news-desc" id="news-desc"></p>
             </div>
         </div>
     </template>
@@ -71,4 +79,5 @@
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/16e1904bc9.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

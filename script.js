@@ -4,12 +4,12 @@ const url2 = "https://newsapi.org/v2/everything?q="
 
 window.addEventListener("load", () => fetchNews("#RELOAD"));
 
-function reload() {
+function reload(id) {
     window.location.reload();
 }
 
 async function fetchNews(query) {
-    if (query == "#RELOAD") {
+    if(query=="#RELOAD"){
         const res = await fetch(url1);
         const data = await res.json();
         bindData(data.articles);
@@ -18,7 +18,7 @@ async function fetchNews(query) {
         curSelectedNav = navItem;
         curSelectedNav.classList.add("active");
     }
-    else {
+    else{
         const res = await fetch(`${url2}${query}&from=2024-03-01&language=en&pageSize=40&apiKey=${API_KEY}`);
         const data = await res.json();
         bindData(data.articles);
